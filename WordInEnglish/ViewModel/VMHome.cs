@@ -849,7 +849,7 @@ namespace WordInEnglishPro.ViewModel
 
         #endregion Methods
 
-        #region Commands
+        #region Commands.
 
         public ICommand btnGoConfig => new Command(async () => await GoConfig());
         public ICommand btnChangeLanguage => new Command(ChangeLanguage);
@@ -863,6 +863,6 @@ namespace WordInEnglishPro.ViewModel
         public ICommand btnThreads => new Command(async () => await GoUrl("https://www.threads.net/@theerudito"));
         public ICommand btnTwitter => new Command(async () => await GoUrl("https://twitter.com/theerudito"));
 
-        #endregion Commands
+        #endregion Commands.
     }
 }
