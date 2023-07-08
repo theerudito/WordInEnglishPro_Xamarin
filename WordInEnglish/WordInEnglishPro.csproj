@@ -52,10 +52,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="apk\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="View\Config.xaml">
       <Generator>MSBuild:Compile</Generator>
     </None>
