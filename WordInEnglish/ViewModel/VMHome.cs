@@ -228,7 +228,7 @@ namespace WordInEnglishPro.ViewModel
 
         #endregion Getters/Setters
 
-        #region Methods
+        #region Methods.
 
         public async Task GenerateWord()
         {
@@ -847,7 +847,7 @@ namespace WordInEnglishPro.ViewModel
             await Browser.OpenAsync(uri);
         }
 
-        #endregion Methods
+        #endregion Methods.
 
         #region Commands.
 
