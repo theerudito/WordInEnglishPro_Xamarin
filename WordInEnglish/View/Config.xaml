@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WordInEnglishPro.View.Config"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#303345">
+            <ImageButton
+                Margin="10"
+                BackgroundColor="Transparent"
+                Command="{Binding btnBack}"
+                HeightRequest="40"
+                HorizontalOptions="Start"
+                Source="back_light.png"
+                WidthRequest="40" />
+
+            <ImageButton BackgroundColor="Transparent" Source="message.png" />
+
+            <Label
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Text="{Binding TextInforEN}"
+                TextColor="white"
+                TextTransform="Uppercase" />
+            <Frame
+                Margin="20"
+                CornerRadius="20"
+                HasShadow="true">
+                <Entry
+                    Keyboard="Text"
+                    MaxLength="50"
+                    Placeholder="{Binding PlaceholderTextEN}"
+                    Text="{Binding WordEnglish}"
+                    TextTransform="Uppercase" />
+            </Frame>
+
+            <Label
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                Text="{Binding TextInforES}"
+                TextColor="white"
+                TextTransform="Uppercase" />
+            <Frame
+                Margin="20"
+                CornerRadius="20"
+                HasShadow="true">
+                <Entry
+                    Keyboard="Text"
+                    MaxLength="50"
+                    Placeholder="{Binding PlaceholderTextES}"
+                    Text="{Binding WordSpanish}"
+                    TextTransform="Uppercase" />
+            </Frame>
+
+            <Button
+                Margin="20"
+                BackgroundColor="GreenYellow"
+                BorderColor="Transparent"
+                Command="{Binding btnSaveNewWord}"
+                CornerRadius="20"
+                Text="{Binding BtnText}" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

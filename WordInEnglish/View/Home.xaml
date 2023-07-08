@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WordInEnglishPro.View.Home"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ContentPage.Content>
+        <Grid
+            BackgroundColor="#303345"
+            ColumnDefinitions="*"
+            RowDefinitions="*,*,*,*,*,*,*, *">
+
+            <StackLayout Grid.Row="0" Grid.Column="0">
+
+                <Grid
+                    Margin="10"
+                    ColumnDefinitions="70,60,*,*,10"
+                    RowDefinitions="60">
+
+                    <StackLayout>
+
+                        <ImageButton
+                            BackgroundColor="Transparent"
+                            BorderColor="Transparent"
+                            Command="{Binding btnChangeLanguage}"
+                            HeightRequest="20"
+                            Source="{Binding ImageLanguage}"
+                            WidthRequest="20" />
+                        <ImageButton
+                            BackgroundColor="Transparent"
+                            BorderColor="Transparent"
+                            Command="{Binding btnGoConfig}"
+                            HeightRequest="25"
+                            Source="configuration.png"
+                            WidthRequest="25" />
+                    </StackLayout>
+
+                    <Frame
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Background="Purple"
+                        CornerRadius="20"
+                        HasShadow="True">
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="angrybirds"
+                            FontSize="18"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding Points}"
+                            TextColor="white"
+                            VerticalTextAlignment="Center" />
+                    </Frame>
+
+                    <Frame
+                        Grid.Row="0"
+                        Grid.Column="3"
+                        BackgroundColor="{Binding ScoreColor}"
+                        CornerRadius="20"
+                        HasShadow="True">
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="angrybirds"
+                            FontSize="18"
+                            HorizontalTextAlignment="Center"
+                            Text="{Binding LabelScore}"
+                            TextColor="Black" />
+                    </Frame>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="0"
+                VerticalOptions="Center">
+                <Frame
+                    Margin="20,0,20,0"
+                    BackgroundColor="AliceBlue"
+                    CornerRadius="20"
+                    HasShadow="True">
+                    <Label
+                        FontAttributes="Bold"
+                        FontFamily="AB"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        Text="{Binding LabelWord}"
+                        TextColor="Black"
+                        TextTransform="Uppercase" />
+                </Frame>
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="2"
+                Grid.Column="0"
+                Margin="50,15,50,0">
+                <Frame
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    BackgroundColor="{Binding ColorFrameOne, Mode=TwoWay}"
+                    CornerRadius="20"
+                    HasShadow="True">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding btnCheckWordOne}" />
+                    </Frame.GestureRecognizers>
+                    <Label
+                        FontAttributes="Bold"
+                        FontFamily="angrybirds"
+                        HorizontalOptions="Center"
+                        Text="{Binding WordOne}"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
+                </Frame>
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="3"
+                Grid.Column="0"
+                Margin="5,0,5,0">
+                <Grid ColumnDefinitions="*,*" RowDefinitions="*">
+
+                    <Frame
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        BackgroundColor="{Binding ColorFrameTwo, Mode=TwoWay}"
+                        CornerRadius="20"
+                        HasShadow="True">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding btnCheckWordTwo}" />
+                        </Frame.GestureRecognizers>
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="angrybirds"
+                            HorizontalOptions="Center"
+                            Text="{Binding WordTwo}"
+                            TextColor="Black"
+                            VerticalOptions="Center" />
+                    </Frame>
+                    <Frame
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        BackgroundColor="{Binding ColorFrameThree, Mode=TwoWay}"
+                        CornerRadius="20"
+                        HasShadow="True">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding btnCheckWordThree}" />
+                        </Frame.GestureRecognizers>
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="angrybirds"
+                            HorizontalOptions="Center"
+                            Text="{Binding WordThree}"
+                            TextColor="Black"
+                            VerticalOptions="Center" />
+                    </Frame>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="4"
+                Grid.Column="0"
+                IsVisible="true"
+                VerticalOptions="Center">
+                <Frame
+                    Margin="20,0,20,0"
+                    BackgroundColor="AliceBlue"
+                    CornerRadius="20"
+                    HasShadow="True">
+                    <Label
+                        FontAttributes="Bold"
+                        FontFamily="AB"
+                        FontSize="20"
+                        HorizontalOptions="Center"
+                        Text="{Binding WordCorrect}"
+                        TextColor="Black"
+                        TextTransform="Uppercase" />
+                </Frame>
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="5"
+                Grid.Column="0"
+                VerticalOptions="Center">
+                <Frame
+                    Margin="20,0,20,0"
+                    BackgroundColor="AliceBlue"
+                    CornerRadius="20"
+                    HasShadow="True">
+                    <Entry
+                        FontAttributes="Bold"
+                        FontFamily="angrybirds"
+                        Placeholder="{Binding Answer}"
+                        Text="{Binding EntryWord}" />
+                </Frame>
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="6"
+                Grid.Column="0"
+                Margin="0"
+                VerticalOptions="Center">
+                <Button
+                    Margin="20,0,20,0"
+                    BackgroundColor="GreenYellow"
+                    Command="{Binding btnCheck}"
+                    CornerRadius="20"
+                    FontFamily="angrybirds"
+                    FontSize="20"
+                    HeightRequest="60"
+                    Text="{Binding CheckYourWord}"
+                    TextColor="Black" />
+            </StackLayout>
+
+            <StackLayout
+                Grid.Row="7"
+                Grid.Column="0"
+                VerticalOptions="Center">
+                <Label
+                    Margin="5"
+                    FontFamily="AB"
+                    HorizontalOptions="Center"
+                    Text="Follow Me"
+                    TextColor="white" />
+                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                    <ImageButton
+                        Margin="10,0,10,0"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        Command="{Binding btnInstagram}"
+                        HeightRequest="20"
+                        Source="instagram.png"
+                        WidthRequest="20" />
+                    <ImageButton
+                        Margin="10,0,10,0"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        Command="{Binding btnGitHub}"
+                        HeightRequest="20"
+                        Source="github.png"
+                        WidthRequest="20" />
+                    <ImageButton
+                        Margin="10,0,10,0"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        Command="{Binding btnThreads}"
+                        HeightRequest="20"
+                        Source="threads.png"
+                        WidthRequest="20" />
+                    <ImageButton
+                        Margin="10,0,10,0"
+                        BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        Command="{Binding btnTwitter}"
+                        HeightRequest="20"
+                        Source="twitter.png"
+                        WidthRequest="20" />
+                </StackLayout>
+                <StackLayout />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
