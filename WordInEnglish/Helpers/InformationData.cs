@@ -6,10 +6,9 @@ namespace WordInEnglishPro.Helpers
 {
     public class InformationData
     {
-        private Application_ContextDB _dbContext = new Application_ContextDB();
-
         public void WORDEN()
         {
+            var _dbContext = new Application_ContextDB();
             var words = new List<WordEN>
                 {
                     new WordEN { IdEN = 1, MyWord = "HELLO" },
@@ -340,6 +339,8 @@ namespace WordInEnglishPro.Helpers
 
         public void WORDES()
         {
+            var _dbContext = new Application_ContextDB();
+
             var words = new List<WordES>
             {
                     new WordES { IdES = 1, MyWord = "HOLA" },

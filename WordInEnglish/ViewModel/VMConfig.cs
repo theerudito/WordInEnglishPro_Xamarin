@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using WordInEnglishPro.Application_Context;
@@ -10,8 +11,6 @@ namespace WordInEnglishPro.ViewModel
 {
     public class VMConfig : BaseVM
     {
-        private Application_ContextDB _context = new Application_ContextDB();
-
         public VMConfig(INavigation navigation)
         {
             Navigation = navigation;
@@ -126,6 +125,7 @@ namespace WordInEnglishPro.ViewModel
 
         public async Task SaveNewWord()
         {
+            var _context = new Application_ContextDB();
             if (ValidateFields() == true)
             {
                 string wordEnglish = WordEnglish.ToUpper().Trim();
@@ -157,13 +157,35 @@ namespace WordInEnglishPro.ViewModel
 
         public async Task newWord()
         {
+            var _context = new Application_ContextDB();
+
             if (ValidateFields() == true && MaxLenght() == true)
             {
-                await _context.AddAsync(new WordEN { MyWord = WordEnglish.ToUpper().Trim() });
-                await _context.AddAsync(new WordES { MyWord = WordSpanish.ToUpper().Trim() });
-                await _context.SaveChangesAsync();
-                await AlertSaveSuccessfully();
-                CleanFields();
+                var wordEnglish = WordEnglish.ToUpper().Trim();
+                var wordSpanish = WordSpanish.ToUpper().Trim();
+
+                bool containsOnlyLettersEN = Regex.IsMatch(wordEnglish, @"^[a-zA-Z\s]+$");
+                bool containsOnlyLettersES = Regex.IsMatch(wordSpanish, @"^[a-zA-Z\s]+$");
+
+                if (containsOnlyLettersEN && containsOnlyLettersES)
+                {
+                    await _context.AddAsync(new WordEN { MyWord = wordEnglish });
+                    await _context.AddAsync(new WordES { MyWord = wordSpanish });
+                    await _context.SaveChangesAsync();
+                    await AlertSaveSuccessfully();
+                    CleanFields();
+                }
+                else
+                {
+                    if (Language == "EN")
+                    {
+                        await Alerts.LoadAlert("WordInEnglish", "Allowed only letters", "OK");
+                    }
+                    else
+                    {
+                        await Alerts.LoadAlert("WordInEnglish", "Permitido solo letras", "SI");
+                    }
+                }
             }
         }
 
@@ -178,29 +200,29 @@ namespace WordInEnglishPro.ViewModel
             var wordEnglish = WordEnglish.ToUpper().Trim();
             var wordSpanish = WordSpanish.ToUpper().Trim();
 
-            // permitido solo 10 caracteres
-            if (wordEnglish.Length > 10)
+            // permitido solo 20 caracteres
+            if (wordEnglish.Length > 20)
             {
                 if (Language == "EN")
                 {
-                    Alerts.LoadAlert("WordInEnglish", "The word must be 10 characters or less", "OK");
+                    Alerts.LoadAlert("WordInEnglish", "The word must be 20 characters or less", "OK");
                 }
                 else
                 {
-                    Alerts.LoadAlert("WordInEnglish", "La palabra debe ser de 10 caracteres o menos", "SI");
+                    Alerts.LoadAlert("WordInEnglish", "La palabra debe ser de 20 caracteres o menos", "SI");
                 }
                 return false;
             }
 
-            if (wordSpanish.Length > 10)
+            if (wordSpanish.Length > 20)
             {
                 if (Language == "EN")
                 {
-                    Alerts.LoadAlert("WordInEnglish", "The word must be 10 characters or less", "OK");
+                    Alerts.LoadAlert("WordInEnglish", "The word must be 20 characters or less", "OK");
                 }
                 else
                 {
-                    Alerts.LoadAlert("WordInEnglish", "La palabra debe ser de 10 caracteres o menos", "SI");
+                    Alerts.LoadAlert("WordInEnglish", "La palabra debe ser de 20 caracteres o menos", "SI");
                 }
                 return false;
             }
@@ -240,7 +262,6 @@ namespace WordInEnglishPro.ViewModel
             if (Language == "EN")
             {
                 await Alerts.LoadAlert("WordInEnglish", "Word saved successfully", "OK");
-                await DisplayAlert("Info", "Word saved successfully", "Ok");
             }
             else
             {
