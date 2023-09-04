@@ -18,6 +18,7 @@
 
             <Label
                 FontAttributes="Bold"
+                FontFamily="AB"
                 HorizontalOptions="Center"
                 Text="{Binding TextInforEN}"
                 TextColor="white"
@@ -27,6 +28,7 @@
                 CornerRadius="20"
                 HasShadow="true">
                 <Entry
+                    FontFamily="AB"
                     Keyboard="Text"
                     MaxLength="50"
                     Placeholder="{Binding PlaceholderTextEN}"
@@ -36,6 +38,7 @@
 
             <Label
                 FontAttributes="Bold"
+                FontFamily="AB"
                 HorizontalOptions="Center"
                 Text="{Binding TextInforES}"
                 TextColor="white"
@@ -45,6 +48,7 @@
                 CornerRadius="20"
                 HasShadow="true">
                 <Entry
+                    FontFamily="AB"
                     Keyboard="Text"
                     MaxLength="50"
                     Placeholder="{Binding PlaceholderTextES}"
@@ -58,6 +62,7 @@
                 BorderColor="Transparent"
                 Command="{Binding btnSaveNewWord}"
                 CornerRadius="20"
+                FontFamily="AB"
                 Text="{Binding BtnText}" />
         </StackLayout>
     </ContentPage.Content>

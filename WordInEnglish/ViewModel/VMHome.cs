@@ -50,6 +50,7 @@ namespace WordInEnglishPro.ViewModel
         private string _labeltextResult;
         private string _inputTextEntry;
         private int _IdWord;
+        private string _follow;
 
         private string _wordOne;
         private string _wordTwo;
@@ -186,6 +187,13 @@ namespace WordInEnglishPro.ViewModel
         }
 
         private int[] IdWordData = { 1, 2, 3 };
+
+        public string Follow
+        {
+            get => _follow;
+            set => SetValue(ref _follow, value);
+        }
+
 
         // LANGUAGE
         private string _language;
@@ -806,6 +814,7 @@ namespace WordInEnglishPro.ViewModel
                 Answer = MyLanguages._Answer;
                 CheckYourWord = MyLanguages._Check_Your_Word;
                 ImageLanguage = ImageSource.FromFile("flag_ES.png");
+                Follow = MyLanguages._followEN;
             }
             else
             {
@@ -813,6 +822,7 @@ namespace WordInEnglishPro.ViewModel
                 Answer = MyLanguages._Respuesta;
                 CheckYourWord = MyLanguages._Revisa_Tu_Palabra;
                 ImageLanguage = ImageSource.FromFile("flag_EN.png");
+                Follow = MyLanguages._followES;
             }
         }
 

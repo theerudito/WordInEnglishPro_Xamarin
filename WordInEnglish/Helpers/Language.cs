@@ -25,5 +25,8 @@
 
         public static string _SaveWORDEN = "ADD WORD";
         public static string _SaveWORDES = "GUARDAR PALABRA";
+
+        public static string _followEN = "FOLLOW US";
+        public static string _followES = "SIGUENOS";
     }
 }
