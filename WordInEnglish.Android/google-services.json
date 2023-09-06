@@ -1,0 +1,155 @@
+{
+  "project_info": {
+    "project_number": "591065169927",
+    "project_id": "xamarinbyerudito",
+    "storage_bucket": "xamarinbyerudito.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591065169927:android:084654ff1f88086b9e2aa2",
+        "android_client_info": {
+          "package_name": "com.byErudito.NumbersInEnglish"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591065169927-835v73rpuhrhek8iclr913j99hf9vjv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKTdrIzdURBTZGQ63g67xtro5mdOiPxGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591065169927-835v73rpuhrhek8iclr913j99hf9vjv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591065169927:android:ebe970d2658ad7149e2aa2",
+        "android_client_info": {
+          "package_name": "com.byErudito.ThingsInEnglish"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591065169927-835v73rpuhrhek8iclr913j99hf9vjv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKTdrIzdURBTZGQ63g67xtro5mdOiPxGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591065169927-835v73rpuhrhek8iclr913j99hf9vjv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591065169927:android:63c0da5fc2cd7a439e2aa2",
+        "android_client_info": {
+          "package_name": "com.byErudito.tu_deuda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591065169927-835v73rpuhrhek8iclr913j99hf9vjv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKTdrIzdURBTZGQ63g67xtro5mdOiPxGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591065169927-835v73rpuhrhek8iclr913j99hf9vjv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591065169927:android:5938112de766eff39e2aa2",
+        "android_client_info": {
+          "package_name": "com.byErudito.wordinenglish"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591065169927-835v73rpuhrhek8iclr913j99hf9vjv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKTdrIzdURBTZGQ63g67xtro5mdOiPxGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591065169927-835v73rpuhrhek8iclr913j99hf9vjv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591065169927:android:5676077e8f9c63749e2aa2",
+        "android_client_info": {
+          "package_name": "com.byErudito.wordinenglishpro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "591065169927-835v73rpuhrhek8iclr913j99hf9vjv4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKTdrIzdURBTZGQ63g67xtro5mdOiPxGA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "591065169927-835v73rpuhrhek8iclr913j99hf9vjv4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
