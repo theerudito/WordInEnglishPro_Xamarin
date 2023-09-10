@@ -51,6 +51,7 @@ namespace WordInEnglishPro.ViewModel
         private string _inputTextEntry;
         private int _IdWord;
         private string _follow;
+        private string _addWord;
 
         private string _wordOne;
         private string _wordTwo;
@@ -107,7 +108,15 @@ namespace WordInEnglishPro.ViewModel
                 OnPropertyChanged();
             }
         }
-
+        public string AddWord
+        {
+            get { return _addWord; }
+            set
+            {
+                _addWord = value;
+                OnPropertyChanged();
+            }
+        }
         public int Trying
         {
             get { return _trying; }
@@ -815,6 +824,7 @@ namespace WordInEnglishPro.ViewModel
                 CheckYourWord = MyLanguages._Check_Your_Word;
                 ImageLanguage = ImageSource.FromFile("flag_ES.png");
                 Follow = MyLanguages._followEN;
+                AddWord = MyLanguages._addWordEN;
             }
             else
             {
@@ -823,28 +833,11 @@ namespace WordInEnglishPro.ViewModel
                 CheckYourWord = MyLanguages._Revisa_Tu_Palabra;
                 ImageLanguage = ImageSource.FromFile("flag_EN.png");
                 Follow = MyLanguages._followES;
+                AddWord = MyLanguages._addWordES;
             }
         }
 
-        public void VibrateDevice()
-        {
-            try
-            {
-                Vibration.Vibrate();
 
-                // Or use specified time
-                var duration = TimeSpan.FromSeconds(1);
-                Vibration.Vibrate(duration);
-            }
-            catch (FeatureNotSupportedException ex)
-            {
-                // Feature not supported on device
-            }
-            catch (Exception ex)
-            {
-                // Other error has occurred.
-            }
-        }
 
         public async Task GoConfig()
         {

@@ -13,7 +13,7 @@
 
                 <Grid
                     Margin="10"
-                    ColumnDefinitions="70,60,*,*,10"
+                    ColumnDefinitions="120,10,*,*,10"
                     RowDefinitions="60">
                     <StackLayout>
                         <ImageButton
@@ -23,13 +23,16 @@
                             HeightRequest="20"
                             Source="{Binding ImageLanguage}"
                             WidthRequest="20" />
-                        <ImageButton
-                            BackgroundColor="Transparent"
-                            BorderColor="Transparent"
-                            Command="{Binding btnGoConfig}"
-                            HeightRequest="25"
-                            Source="add.png"
-                            WidthRequest="25" />
+                        <Label
+                            FontAttributes="Bold"
+                            FontFamily="AB"
+                            HorizontalOptions="Center"
+                            Text="{Binding AddWord}"
+                            TextColor="white">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding btnGoConfig}" />
+                            </Label.GestureRecognizers>
+                        </Label>
                     </StackLayout>
 
                     <Frame

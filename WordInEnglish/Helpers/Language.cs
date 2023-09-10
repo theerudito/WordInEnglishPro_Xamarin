@@ -28,5 +28,8 @@
 
         public static string _followEN = "FOLLOW US";
         public static string _followES = "SIGUENOS";
+
+        public static string _addWordEN = "ADD WORD";
+        public static string _addWordES = "AÑADIR PALABRA";
     }
 }
