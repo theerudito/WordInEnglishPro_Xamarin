@@ -32,7 +32,9 @@
                     Keyboard="Text"
                     MaxLength="50"
                     Placeholder="{Binding PlaceholderTextEN}"
+                    PlaceholderColor="Silver"
                     Text="{Binding WordEnglish}"
+                    TextColor="Black"
                     TextTransform="Uppercase" />
             </Frame>
 
@@ -52,7 +54,9 @@
                     Keyboard="Text"
                     MaxLength="50"
                     Placeholder="{Binding PlaceholderTextES}"
+                    PlaceholderColor="Silver"
                     Text="{Binding WordSpanish}"
+                    TextColor="Black"
                     TextTransform="Uppercase" />
             </Frame>
 
@@ -63,7 +67,9 @@
                 Command="{Binding btnSaveNewWord}"
                 CornerRadius="20"
                 FontFamily="AB"
-                Text="{Binding BtnText}" />
+                FontSize="20"
+                Text="{Binding BtnText}"
+                TextColor="Black" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

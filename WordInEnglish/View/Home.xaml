@@ -185,7 +185,9 @@
                         FontAttributes="Bold"
                         FontFamily="AB"
                         Placeholder="{Binding Answer}"
-                        Text="{Binding EntryWord}" />
+                        PlaceholderColor="Silver"
+                        Text="{Binding EntryWord}"
+                        TextColor="Black" />
                 </Frame>
             </StackLayout>
 
