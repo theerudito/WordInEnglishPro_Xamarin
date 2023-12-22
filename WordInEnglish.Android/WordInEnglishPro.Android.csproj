@@ -41,6 +41,11 @@
     <AndroidPackageFormat>apk</AndroidPackageFormat>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
+    <AndroidKeyStore>true</AndroidKeyStore>
+    <AndroidSigningKeyStore>C:\Users\ewine\AppData\Local\Xamarin\Mono for Android\Keystore\theboss\theboss.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>eruditojl</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>theboss</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>eruditojl</AndroidSigningKeyPass>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
